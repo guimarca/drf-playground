@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "drf-playground"
+version = "0.1.0"
+description = ""
+authors = ["Guillem MC <guimarca@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^4.0"
+djangorestframework = "^3.13.1"
+django-filter = "^21.1"
+requests = "^2.26.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^21.12b0"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
