@@ -1,5 +1,7 @@
 from rest_framework import viewsets
+from rest_framework.decorators import action
 from rest_framework.generics import ListAPIView
+from rest_framework.response import Response
 
 from stuff.models import Stuff
 from stuff.serializers import StuffSerializer
@@ -8,6 +10,10 @@ from stuff.serializers import StuffSerializer
 class StuffViewset(viewsets.ModelViewSet):
     queryset = Stuff.objects.all()
     serializer_class = StuffSerializer
+
+    @action(detail=True, methods=["post"])
+    def foo(self, request, pk=None):
+        return Response({"pk": pk})
 
 
 class StuffScoreView(ListAPIView):
