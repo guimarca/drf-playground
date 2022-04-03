@@ -12,6 +12,7 @@ def test_stuff_get(client):
     assert response.status_code == 200
 
 
+@pytest.mark.django_db
 def test_foo():
     request = factory.post("/api/resource/1/foo/")
     view = StuffViewset.as_view({"post": "foo"})

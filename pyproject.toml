@@ -11,6 +11,11 @@ djangorestframework = "^3.13.1"
 django-filter = "^21.1"
 requests = "^2.26.0"
 pytest-django = "^4.5.2"
+testcontainers = "^3.5.0"
+psycopg2-binary = "^2.9.3"
+
+[tool.poetry.extras]
+testcontainers = ["postgres"]
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
